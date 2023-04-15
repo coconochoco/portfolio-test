@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thang Nguyen Porfolio Website</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!--custome css file link-->
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('XiiA5b8za2CHn85Lx');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- header section starts -->
+    <header>
+        <div class="user">
+            <img src="img/me.JPG" alt="">
+            <h3 class="name">Trong Thang Nguyen</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/MarcoNguyen1207/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/thang.nguyen1207/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/thang-nguyen-829668183/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#education"><i class="fa-solid fa-user-graduate"></i> Education</a></li>
+                <li><a href="#portfolio"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer">
+            <p>&copy; Copyright 2023 <br> <span>Designed By Thang Nguyen</span></p>
+        </div>
+    </header>
+    <!-- header section ends -->
+
+    <div id="menu" class="fas fa-bars">
+
+    </div>
+    <!-- home section starts -->
+    <section class="home" id="home">
+        <h3> HELLO WORLD</h3>
+        <h1> I'm <span>Thang</span></h1>
+        <h3><span class="typing"></span></h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate sequi possimus perspiciatis aut minus voluptatem soluta, 
+            aliquid nobis dicta accusantium aspernatur dolores quos repudiandae sed consectetur expedita ea est tempora.</p>
+        <a href="#about"><button class="btn">About Me <i class="fas fa-user"></i></button></a>
+    </section>
+    <!-- home section ends -->
+
+    <!-- about section starts -->
+    <section class="about" id="about">
+        <h1 class="heading"><span>About</span> Me</h1>
+        <div class="row">
+            <div class="info">
+                <h3><span>Name : </span>Trong Thang Nguyen</h3>
+                <h3><span>Age : </span>26</h3>
+                <h3><span>Nationality : </span>Vietnamese</h3>
+                <h3><span>Qualifications : </span>Bachelor of Information Technology, Advanced Diploma of Leadership and Management,
+                    Diploma of Information Technology Networking, Certificate III of Digital Media and Technology</h3>
+                <h3><span>Languages : </span>Vietnamese, English</h3>
+                <a href="TrongThangNguyen_Resume_2022.pdf" download><button class="btn"> Download CV <i class="fas fa-download"></i></button></a>
+
+            </div>
+            <div class="counter">
+                <div class="box">
+                    <span>1+</span>
+                    <h3>Years of Experience</h3>
+                </div>
+                <div class="box">
+                    <span>5+</span>
+                    <h3>Projects Completed</h3>
+                </div>
+                <div class="box">
+                    <span>10+</span>
+                    <h3>Happy Clients</h3>
+                </div>
+                <div class="box">
+                    <span>10+</span>
+                    <h3>Possitive Feedback</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section ends -->
+
+    <!-- education section starts -->
+    <section class="education" id="education">
+        <h1 class="heading">My <span>Education</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2017</span>
+                <h3>Certificate III of Digital Media and Technology</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit consequatur voluptatem porro mollitia magni minima excepturi repellat dolor 
+                    perspiciatis ad? Aspernatur sunt perspiciatis ea veritatis dolores quibusdam asperiores distinctio at?</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2018</span>
+                <h3>Diploma of Information Technology Networking</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit consequatur voluptatem porro mollitia magni minima excepturi repellat dolor 
+                    perspiciatis ad? Aspernatur sunt perspiciatis ea veritatis dolores quibusdam asperiores distinctio at?</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2020</span>
+                <h3>Advanced Diploma of Leadership and Management</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit consequatur voluptatem porro mollitia magni minima excepturi repellat dolor 
+                    perspiciatis ad? Aspernatur sunt perspiciatis ea veritatis dolores quibusdam asperiores distinctio at?</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2023</span>
+                <h3>Bachelor of Information Technology</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit consequatur voluptatem porro mollitia magni minima excepturi repellat dolor 
+                    perspiciatis ad? Aspernatur sunt perspiciatis ea veritatis dolores quibusdam asperiores distinctio at?</p>
+            </div>
+        </div>
+    </section>
+    <!-- education section ends -->
+
+    <!-- portfolio section starts -->
+    <section class="portfolio" id="portfolio">
+        <h1 class="heading">My <span>Portfolio</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="img/netflixclone.jpeg" alt="">
+            </div>
+            <div class="box">
+                <img src="img/spotifyclone.webp" alt="">
+            </div>
+            <div class="box">
+                <img src="img/nailsalonwebsite.webp" alt="">
+            </div>
+            <div class="box">
+                <img src="img/weatherapp.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- portfolio section ends -->
+
+    <!-- contact section starts -->
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>Contact</span> Me</h1>
+        <div class="row">
+            <div class="content">
+                <h3 class="title">Contact Info</h3>
+                <div class="info">
+                    <h3><i class="fas fa-envelope"></i> nguyentrongthang12071997@gmail.com</h3>
+                    <h3><i class="fas fa-phone"></i> +61403359799</h3>
+                    <h3><i class="fas fa-map-marker-alt"></i> Caboolture, Brisbane, QLD, 4510</h3>
+                </div>
+            </div>
+            <form id="contact-form" method="post">
+                <input type="text" id="name" placeholder="Name" class="box" required>
+                <input type="email" id="email" placeholder="Email" class="box" required>
+                <input type="text" id="contactnumber" placeholder="Contact number" class="box" required>
+                <input type="text" id="project" placeholder="Project" class="box" required>
+                <textarea id="message" cols="30" rows="10" class="box message" placeholder="Type your message here..." required></textarea>
+                <button type="submit" class="btn" id="btn" onclick="sendMail()">Send <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+    <!-- contact section starts -->
+
+    <!-- scroll top button -->
+    <a href="#home" class="top">
+        <img src="img/topbutton.png" alt="">
+    </a>
+
+
+    <!--jquery cdn link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!--custom js file link-->
+    <script src="script.js"></script>
+    <!-- custom js file for typing effect -->
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+
+</body> 
+</html>
